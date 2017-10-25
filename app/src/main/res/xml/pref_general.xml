@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:digits="1234567890."
+        android:defaultValue="@string/pref_default_server"
+        android:dependency="switch_gfw"
+        android:inputType="number|numberDecimal"
+        android:key="text_server"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_server" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_default_server_port"
+        android:dependency="switch_gfw"
+        android:inputType="number|numberDecimal"
+        android:key="text_server_port"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_server_port" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_default_passward"
+        android:dependency="switch_gfw"
+        android:inputType="textPassword"
+        android:key="text_password"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_password" />
+    <EditTextPreference
+        android:defaultValue="@string/pref_default_proxy_port"
+        android:dependency="switch_gfw"
+        android:inputType="number|numberDecimal"
+        android:key="text_proxy_port"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_proxy_port" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:disableDependentsState="true"
+        android:key="switch_gfw"
+        android:title="@string/pref_title_switch" />
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+
+</PreferenceScreen>
